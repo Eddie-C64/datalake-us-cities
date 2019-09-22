@@ -4,29 +4,24 @@
 Install the necessary python libraries listed below:
 - numpy
 - pandas
-- bokeh
-- dask
-- apache-dataflow
-- statsmodels
-- scikit-learn
-- facebook-prophet
+- pyspark
 
 ## Data Resources:
-1) NCHS reports on births and fertilities by cities in US. Source prodived by NCHS on [Data.gov](https://data.cdc.gov/NCHS/NCHS-Births-and-General-Fertility-Rates-United-Sta/e6fc-ccez).
+1) NCHS reports on births and fertilises by cities in US. Source provided by NCHS on [Data.gov](https://data.cdc.gov/NCHS/NCHS-Births-and-General-Fertility-Rates-United-Sta/e6fc-ccez).
 2) US Government reports on US cities and diseases. Source from [Data.gov](https://catalog.data.gov/dataset/u-s-chronic-disease-indicators-cdi).
 3) Climate and Other Weather data about Cities. Source provided by [Kaggle](https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data/download).
 4) US Cities Cost of Living and Demographics data. Source is found [here](https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/).
-5) Crime rates prodived by the FBI. [FBI.crimereport.gov](https:www.google.com).
-6) Schooling ratings for cities in the US. Source found on [Kaggle](https:www.google.com).
+5) Crime rates provided by the FBI. [FBI.crimereport.gov](https:www.google.com).
+
 ## AWS SetUp and Access
-Set up two S3 bucket to store all the data and another to place the wrangled data.
+Set up two S3 bucket to store all the data and another bucket to place the wrangled data.
 
-- The data wrangling uses Apache Spark to do ETL on the data.
-- You will need to set up the AWS credentials
+- The data wrangling uses Apache Spark to do ETL on the data into a data lake.
+- You will need to set up the AWS credentials.
 
-## Star Schema of the Database
-- Insert basic image of the database here.
+## Snowflake Schema of the Database
+This is the set-up of the Snowflake schema
+![Image of Snowflake Schema](snowflake-schema.png)
 
-## Interactive graph for users 
-Based on the selected data fields the user can interact with the graph and see what the data is output and the user can make their own conclusion about the city.
-
+## Run
+After the s3 buckets are created and your credentials run `python etl.py`
